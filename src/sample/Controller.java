@@ -7,72 +7,179 @@ import javafx.event.ActionEvent;
 
 import java.util.ArrayList;
 
+/**
+ * Thecontroller part of program.
+ */
 public class Controller {
+    /**
+     * The Text on show.
+     */
     public String textOnShow = "";
+    /**
+     * The Nums.
+     */
     public ArrayList<String> nums = new ArrayList<String>();
+    /**
+     * The Signs.
+     */
     public String signs = "+";
+    /**
+     * The Num sign.
+     */
     public double numSign=1;
-    public boolean lastWasNum = false,oneNumberNeeded=false;
+    /**
+     * The Last was num.
+     */
+    public boolean lastWasNum = false, /**
+     * The One number needed.
+     */
+    oneNumberNeeded=false;
+    /**
+     * The Show.
+     */
     @FXML
     public TextArea show;
 
+    /**
+     * The One.
+     */
     @FXML
     public Button one;
 
+    /**
+     * The Log.
+     */
     @FXML
     public Button log;
 
 
+    /**
+     * The Two.
+     */
     @FXML
     public Button two;
+    /**
+     * The Three.
+     */
     @FXML
     public Button three;
+    /**
+     * The Four.
+     */
     @FXML
     public Button four;
+    /**
+     * The Five.
+     */
     @FXML
     public Button five;
+    /**
+     * The Six.
+     */
     @FXML
     public Button six;
+    /**
+     * The Seven.
+     */
     @FXML
     public Button seven;
+    /**
+     * The Eight.
+     */
     @FXML
     public Button eight;
+    /**
+     * The Nine.
+     */
     @FXML
     public Button nine;
+    /**
+     * The Zero.
+     */
     @FXML
     public Button zero;
+    /**
+     * The Division.
+     */
     @FXML
     public Button division;
+    /**
+     * The Multiply.
+     */
     @FXML
     public Button multiply;
+    /**
+     * The Minus.
+     */
     @FXML
     public Button minus;
+    /**
+     * The Sum.
+     */
     @FXML
     public Button sum;
+    /**
+     * The Radical.
+     */
     @FXML
     public Button radical;
+    /**
+     * The Equal.
+     */
     @FXML
     public Button equal;
+    /**
+     * The Tan.
+     */
     @FXML
     public Button tan;
+    /**
+     * The Sin.
+     */
     @FXML
     public Button sin;
+    /**
+     * The Cos.
+     */
     @FXML
     public Button cos;
+    /**
+     * The Cot.
+     */
     @FXML
     public Button cot;
+    /**
+     * The Power.
+     */
     @FXML
     public Button power;
+    /**
+     * The Sign.
+     */
     @FXML
     public Button sign;
+    /**
+     * The Dot.
+     */
     @FXML
     public Button dot;
+    /**
+     * The Ac.
+     */
     @FXML
     public Button ac;
+    /**
+     * The Ln.
+     */
     @FXML
     public Button ln;
 
 
+    /**
+     * F 1.
+     *
+     * @param e the e
+     */
     @FXML
     public void f1(ActionEvent e) {
         if (lastWasNum) {
@@ -86,6 +193,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 2.
+     *
+     * @param e the e
+     */
     @FXML
     public void f2(ActionEvent e) {
         if (lastWasNum) {
@@ -99,6 +211,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 3.
+     *
+     * @param e the e
+     */
     @FXML
     public void f3(ActionEvent e) {
         if (lastWasNum) {
@@ -112,6 +229,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 4.
+     *
+     * @param e the e
+     */
     @FXML
     public void f4(ActionEvent e) {
         if (lastWasNum) {
@@ -125,6 +247,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 5.
+     *
+     * @param e the e
+     */
     @FXML
     public void f5(ActionEvent e) {
         if (lastWasNum) {
@@ -138,6 +265,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 6.
+     *
+     * @param e the e
+     */
     @FXML
     public void f6(ActionEvent e) {
         if (lastWasNum) {
@@ -151,6 +283,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 7.
+     *
+     * @param e the e
+     */
     @FXML
     public void f7(ActionEvent e) {
         if (lastWasNum) {
@@ -164,6 +301,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 8.
+     *
+     * @param e the e
+     */
     @FXML
     public void f8(ActionEvent e) {
         if (lastWasNum) {
@@ -177,6 +319,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 9.
+     *
+     * @param e the e
+     */
     @FXML
     public void f9(ActionEvent e) {
         if (lastWasNum) {
@@ -190,6 +337,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F 0.
+     *
+     * @param e the e
+     */
     @FXML
     public void f0(ActionEvent e) {
         if (lastWasNum) {
@@ -203,6 +355,11 @@ public class Controller {
         show.setText(textOnShow);
     }
 
+    /**
+     * F sum.
+     *
+     * @param e the e
+     */
     @FXML
     public void fSum(ActionEvent e) {
         setSign();
@@ -213,16 +370,23 @@ public class Controller {
         }
         if(!lastWasNum)
             error();
+        else{
+
+
         lastWasNum=false;
         if(!signs.equals("+"))
             calculate();
         signs="+";
         textOnShow = textOnShow + "+";
         show.setText(textOnShow);
-    }
+    }}
 
 
-
+    /**
+     * F minus.
+     *
+     * @param e the e
+     */
     @FXML
     public void fMinus(ActionEvent e) {
         setSign();
@@ -233,14 +397,23 @@ public class Controller {
         }
         if(!lastWasNum)
             error();
-        if(!signs.equals("+"))
-            calculate();
-        lastWasNum=false;
-        signs="-";
-        textOnShow = textOnShow + "-";
-        show.setText(textOnShow);
+        else
+        {
+            if(!signs.equals("+"))
+                calculate();
+            lastWasNum=false;
+            signs="-";
+            textOnShow = textOnShow + "-";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F equal.
+     *
+     * @param e the e
+     */
     @FXML
     public void fEqual(ActionEvent e) {
         setSign();
@@ -259,7 +432,11 @@ public class Controller {
     }
 
 
-
+    /**
+     * F sign.
+     *
+     * @param e the e
+     */
     @FXML
     public void fSign(ActionEvent e) {
         if(oneNumberNeeded)
@@ -274,33 +451,55 @@ public class Controller {
         numSign*=-1;
     }
 
+    /**
+     * F radical.
+     *
+     * @param e the e
+     */
     @FXML
     public void fRadical(ActionEvent e) {
         if(lastWasNum)
             error();
-        oneNumberNeeded=true;
-        signs="√";
-        textOnShow = textOnShow + "√";
-        show.setText(textOnShow);
+        else
+        {
+            oneNumberNeeded=true;
+            signs="√";
+            textOnShow = textOnShow + "√";
+            show.setText(textOnShow);
+        }
     }
 
+    /**
+     * F dot.
+     *
+     * @param e the e
+     */
     @FXML
     public void fDot(ActionEvent e) {
         if(lastWasNum)
             if(nums.get(nums.size()-1).contains("."))
                 error();
-        if(!lastWasNum)
-            nums.add("0.");
-        else
-        {
-            String temp = nums.get(nums.size() - 1) + ".";
-            nums.remove(nums.size() - 1);
-            nums.add(temp);
-        }
-        textOnShow = textOnShow + ".";
-        show.setText(textOnShow);
+            else
+            {
+                if(!lastWasNum)
+                    nums.add("0.");
+                else
+                {
+                    String temp = nums.get(nums.size() - 1) + ".";
+                    nums.remove(nums.size() - 1);
+                    nums.add(temp);
+                }
+                textOnShow = textOnShow + ".";
+                show.setText(textOnShow);
+            }
+
     }
 
+    /**
+     * F divide.
+     *
+     * @param e the e
+     */
     @FXML
     public void fDivide(ActionEvent e) {
         setSign();
@@ -311,58 +510,103 @@ public class Controller {
         }
         if(!lastWasNum)
             error();
-        if(!signs.equals("+"))
-            calculate();
-        lastWasNum=false;
-        signs="÷";
-        textOnShow = textOnShow + "÷";
-        show.setText(textOnShow);
+        else
+        {
+            if(!signs.equals("+"))
+                calculate();
+            lastWasNum=false;
+            signs="÷";
+            textOnShow = textOnShow + "÷";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F tan.
+     *
+     * @param e the e
+     */
     @FXML
     public void fTan(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="tan";
-        textOnShow = textOnShow + "tan";
-        show.setText(textOnShow);
+        else
+        {
+            signs="tan";
+            textOnShow = textOnShow + "tan";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F sin.
+     *
+     * @param e the e
+     */
     @FXML
     public void fSin(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="sin";
-        textOnShow = textOnShow + "sin";
-        show.setText(textOnShow);
+        else
+        {
+            signs="sin";
+            textOnShow = textOnShow + "sin";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F cos.
+     *
+     * @param e the e
+     */
     @FXML
     public void fCos(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="cos";
-        textOnShow = textOnShow + "cos";
-        show.setText(textOnShow);
+        else
+        {signs="cos";
+            textOnShow = textOnShow + "cos";
+            show.setText(textOnShow);
+
+        }
+
     }
 
+    /**
+     * F log.
+     *
+     * @param e the e
+     */
     @FXML
     public void fLog(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="Log";
-        textOnShow = textOnShow + "Log";
-        show.setText(textOnShow);
+        else
+        {
+            signs="Log";
+            textOnShow = textOnShow + "Log";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F power.
+     *
+     * @param e the e
+     */
     @FXML
     public void fPower(ActionEvent e) {
         setSign();
@@ -373,14 +617,23 @@ public class Controller {
         }
         if(!lastWasNum)
             error();
-        lastWasNum=false;
-        if(!signs.equals("+"))
-            calculate();
-        signs="^";
-        textOnShow = textOnShow + "^";
-        show.setText(textOnShow);
+        else
+        {
+            lastWasNum=false;
+            if(!signs.equals("+"))
+                calculate();
+            signs="^";
+            textOnShow = textOnShow + "^";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F multiply.
+     *
+     * @param e the e
+     */
     @FXML
     public void fMultiply(ActionEvent e) {
         setSign();
@@ -391,28 +644,45 @@ public class Controller {
         }
         if(!lastWasNum)
             error();
-        lastWasNum=false;
-        if(!signs.equals("+"))
-            calculate();
-        signs="x";
-        textOnShow = textOnShow + "x";
-        show.setText(textOnShow);
+        else
+        {
+            lastWasNum=false;
+            if(!signs.equals("+"))
+                calculate();
+            signs="x";
+            textOnShow = textOnShow + "x";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F cot.
+     *
+     * @param e the e
+     */
     @FXML
     public void fCot(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="cot";
-        textOnShow = textOnShow + "cot";
-        show.setText(textOnShow);
+        else
+        {
+            signs="cot";
+            textOnShow = textOnShow + "cot";
+            show.setText(textOnShow);
+        }
+
     }
 
+    /**
+     * F ac.
+     *
+     * @param e the e
+     */
     @FXML
     public void fAc(ActionEvent e) {
-        setSign();
         textOnShow = "";
         show.setText(textOnShow);
         nums.clear();
@@ -421,16 +691,29 @@ public class Controller {
         oneNumberNeeded=false;
     }
 
+    /**
+     * F ln.
+     *
+     * @param e the e
+     */
     @FXML
     public void fLn(ActionEvent e) {
         setSign();
         oneNumberNeeded=true;
         if(lastWasNum)
             error();
-        signs="ln";
-        textOnShow = textOnShow + "ln";
-        show.setText(textOnShow);
+        else
+        {
+            signs="ln";
+            textOnShow = textOnShow + "ln";
+            show.setText(textOnShow);
+        }
+
     }
+
+    /**
+     * Error.
+     */
     public void error()
     {
         show.setText("Error");
@@ -460,6 +743,10 @@ public class Controller {
                 break;
         }
     }
+
+    /**
+     * Calculate one.
+     */
     public void calculateOne() {
         double a=Double.parseDouble(nums.get(nums.size()-1));
         nums.remove(nums.get(nums.size()-1));
@@ -503,6 +790,9 @@ public class Controller {
         oneNumberNeeded=false;
     }
 
+    /**
+     * Sets sign.
+     */
     public void setSign() {
         String temp=String.valueOf(numSign*(Double.parseDouble(nums.get(nums.size()-1))));
         nums.remove(nums.size()-1);

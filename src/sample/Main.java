@@ -8,6 +8,11 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 
+/**
+ * The type Main.
+ * @author Amir Hosseini
+ * @version 19-6-2021
+ */
 public class Main extends Application {
 
     @Override
@@ -21,6 +26,11 @@ public class Main extends Application {
     }
 
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
