@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="sample.Controller"
+      prefHeight="400.0" prefWidth="640.0">
+    <MenuBar VBox.vgrow="NEVER">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+        </Menu>
+    </MenuBar>
+    <AnchorPane prefHeight="303.0" prefWidth="569.0" VBox.vgrow="ALWAYS">
+        <TextArea fx:id="show" layoutX="8.0" prefHeight="69.0" prefWidth="625.0" />
+        <Button fx:id="one" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#f1" prefHeight="52.0" prefWidth="66.0" text="1">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="three" layoutX="205.0" layoutY="75.0" mnemonicParsing="false" onAction="#f3" prefHeight="52.0" prefWidth="66.0" text="3">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="two" layoutX="110.0" layoutY="75.0" mnemonicParsing="false" onAction="#f2" prefHeight="52.0" prefWidth="66.0" text="2">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="four" layoutX="14.0" layoutY="148.0" mnemonicParsing="false" onAction="#f4" prefHeight="52.0" prefWidth="66.0" text="4">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="five" layoutX="110.0" layoutY="148.0" mnemonicParsing="false" onAction="#f5" prefHeight="52.0" prefWidth="66.0" text="5">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="six" layoutX="205.0" layoutY="148.0" mnemonicParsing="false" onAction="#f6" prefHeight="52.0" prefWidth="66.0" text="6">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="seven" layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#f7" prefHeight="52.0" prefWidth="66.0" text="7">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="eight" layoutX="110.0" layoutY="223.0" mnemonicParsing="false" onAction="#f8" prefHeight="52.0" prefWidth="66.0" text="8">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="nine" layoutX="205.0" layoutY="223.0" mnemonicParsing="false" onAction="#f9" prefHeight="52.0" prefWidth="66.0" text="9">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="dot" layoutX="205.0" layoutY="303.0" mnemonicParsing="false" onAction="#fDot" prefHeight="52.0" prefWidth="66.0" text=".">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="zero" layoutX="110.0" layoutY="303.0" mnemonicParsing="false" onAction="#f0" prefHeight="52.0" prefWidth="66.0" text="0">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+        <Button fx:id="sign" layoutX="14.0" layoutY="303.0" mnemonicParsing="false" onAction="#fSign" prefHeight="65.0" prefWidth="66.0" text="+/-">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Button>
+        <Button fx:id="sum" layoutX="321.0" layoutY="108.0" mnemonicParsing="false" onAction="#fSum" prefHeight="0.0" prefWidth="81.0" text="+">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="multiply" layoutX="545.0" layoutY="108.0" mnemonicParsing="false" onAction="#fMultiply" prefHeight="0.0" prefWidth="81.0" text="x">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="minus" layoutX="431.0" layoutY="108.0" mnemonicParsing="false" onAction="#fMinus" prefHeight="0.0" prefWidth="81.0" text="-">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="radical" layoutX="431.0" layoutY="149.0" mnemonicParsing="false" onAction="#fRadical" prefHeight="0.0" prefWidth="81.0" text="√ ">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="sin" layoutX="545.0" layoutY="149.0" mnemonicParsing="false" onAction="#fSin" prefHeight="0.0" prefWidth="81.0" text="sin">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="cot" layoutX="545.0" layoutY="188.0" mnemonicParsing="false" onAction="#fCot" prefHeight="0.0" prefWidth="81.0" text="cot">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="division" layoutX="321.0" layoutY="149.0" mnemonicParsing="false" onAction="#fDivide" prefHeight="0.0" prefWidth="81.0" text="÷">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="cos" layoutX="321.0" layoutY="188.0" mnemonicParsing="false" onAction="#fCos" prefHeight="0.0" prefWidth="81.0" text="cos">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="tan" layoutX="431.0" layoutY="188.0" mnemonicParsing="false" onAction="#fTan" prefHeight="0.0" prefWidth="81.0" text="tan">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="log" layoutX="321.0" layoutY="229.0" mnemonicParsing="false" onAction="#fLog" prefHeight="0.0" prefWidth="81.0" text="Log">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="power" layoutX="431.0" layoutY="229.0" mnemonicParsing="false" onAction="#fPower" prefHeight="0.0" prefWidth="81.0" text="^">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="ln" layoutX="545.0" layoutY="229.0" mnemonicParsing="false" onAction="#fLn" prefHeight="0.0" prefWidth="81.0" text="Ln">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="equal" layoutX="321.0" layoutY="267.0" mnemonicParsing="false" onAction="#fEqual" prefHeight="92.0" prefWidth="146.0" text="=">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Button>
+        <Button fx:id="ac" layoutX="480.0" layoutY="267.0" mnemonicParsing="false" onAction="#fAc" prefHeight="92.0" prefWidth="146.0" text="AC">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Button>
+    </AnchorPane>
+</VBox>
