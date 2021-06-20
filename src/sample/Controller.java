@@ -794,9 +794,12 @@ public class Controller {
      * Sets sign.
      */
     public void setSign() {
-        String temp=String.valueOf(numSign*(Double.parseDouble(nums.get(nums.size()-1))));
-        nums.remove(nums.size()-1);
-        nums.add(temp);
-        numSign=1;
+        if(nums.size()!=0)
+        {
+            String temp=String.valueOf(numSign*(Double.parseDouble(nums.get(nums.size()-1))));
+            nums.remove(nums.size()-1);
+            nums.add(temp);
+            numSign=1;
+        }
     }
 }
